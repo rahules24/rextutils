@@ -3,8 +3,8 @@ import PropTypes from 'prop-types'
 
 export default function Navbar(props) {
   return (
-    <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
-  <div className="container-fluid">
+    <nav className={`navbar navbar-expand-lg bg-${props.mode} navbar-${props.mode}`}>
+    <div className="container-fluid">
     <a className="navbar-brand" href="/">{props.title}</a>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>
@@ -26,6 +26,10 @@ export default function Navbar(props) {
         </li>
       </ul>
     </div>
+    <div className={`form-check form-switch text-${props.mode==='light'?'dark':'light'}`}>
+        <input className="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" onClick={props.toggleMode}/>
+        <label className="form-check-label" htmlFor="flexSwitchCheckDefault">Dark Mode</label>
+        </div>
   </div>
 </nav>
   )

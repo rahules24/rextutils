@@ -29,7 +29,7 @@ export default function TextForm(props) {
         <div className="container">
             <h1>{props.heading}</h1>
             <div className="mb-3">
-                <textarea className="form-control" value={text} onChange={handleOnChange} id="myBox" rows="10" ></textarea>
+                <textarea className="form-control" style={{backgroundColor:props.mode==='light'?'white':'#2b2f33', color:props.mode==='light'?'black':'white'}} value={text} onChange={handleOnChange} id="myBox" rows="10" ></textarea>
             </div>
             <button className="btn btn-primary btn-space" onClick={handleClear}>CLEAR</button>
             <button className="btn btn-primary btn-space" onClick={handleCopy}>Copy Text</button>
