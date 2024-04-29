@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 export default function TextForm(props) {
     const handleClear = ()=>{
         setText('');
+        props.showAlert("Data is cleared", "danger")
     }
     const handleCopy = ()=>{
         let text = document.getElementById("myBox");
