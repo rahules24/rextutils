@@ -10,6 +10,8 @@ export default function TextForm(props) {
         let text = document.getElementById("myBox");
         text.select();
         navigator.clipboard.writeText(text.value);
+        document.getSelection().removeAllRanges();
+        props.showAlert("Copied to clipboard!", "primary")
     }
     const handleUC = ()=>{
         // console.log("UpperCase was clicked: "+text)
@@ -32,15 +34,15 @@ export default function TextForm(props) {
             <div className="mb-3">
                 <textarea className="form-control" style={{backgroundColor:props.mode==='light'?'white':'#2b2f33', color:props.mode==='light'?'black':'white'}} value={text} onChange={handleOnChange} id="myBox" rows="10" ></textarea>
             </div>
-            <button className="btn btn-primary btn-space" onClick={handleClear}>CLEAR</button>
-            <button className="btn btn-primary btn-space" onClick={handleCopy}>Copy Text</button>
-            <button className="btn btn-primary btn-space" onClick={handleUC}>Convert to UPPERCASE</button>
-            <button className="btn btn-primary" onClick={handleLC}>Convert to lowercase</button>
+            <button disabled={text.length ===0} className="btn btn-primary btn-space" onClick={handleClear}>CLEAR</button>
+            <button disabled={text.length ===0} className="btn btn-primary btn-space" onClick={handleCopy}>Copy Text</button>
+            <button disabled={text.length ===0} className="btn btn-primary btn-space" onClick={handleUC}>Convert to UPPERCASE</button>
+            <button disabled={text.length ===0} className="btn btn-primary" onClick={handleLC}>Convert to lowercase</button>
         </div>
         <div className="container my-2">
             <h2>Text Summary</h2>
             <p>No. of characters: {text.length}</p>
-            <p>No. of words: {text.split(/\n|\s/).length}</p>
+            <p>No. of words: {text.split(/\n|\s/).filter((ele)=>{return ele.length!==0}).length}</p>
         </div>
     </>
   )
