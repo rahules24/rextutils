@@ -60,12 +60,12 @@ export default function About({ mode }) {
                 <div className={`accordion ${accordionClass}`} id="accordionExample">
                     <div className="accordion-item">
                         <h2 className="accordion-header">
-                            <button className="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"
+                            <button className="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
                             style={fontStyle}>
                                 SirenScripts
                             </button>
                         </h2>
-                        <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                        <div id="collapseOne" className="accordion-collapse collapse" data-bs-parent="#accordionExample">
                             <div className="accordion-body">
                             A vibrant showcase of my creative journey, hidden in plain sight, waiting to be explored. <i>It's not just code; it's a treasure trove of art.
                             <a style={{textDecoration:'none'}} href="https://rahules24.github.io/sirenscripts/"> visit xd</a>

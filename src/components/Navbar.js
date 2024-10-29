@@ -8,13 +8,13 @@ export default function Navbar(props) {
   return (
     <nav className={`navbar navbar-expand-lg bg-color-${props.mode} navbar-${props.mode}`}>
       <div className="container-fluid">
-      <Link className="navbar-brand" to="https://rahules24.github.io/sirenscripts/">
+      <a className="navbar-brand" href="https://rahules24.github.io/sirenscripts/">
         <img 
           src={logo} 
           style={{ marginLeft: '2rem', maxHeight: '50px' }} 
           alt="Logo" 
         />
-      </Link>
+      </a>
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
