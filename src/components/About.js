@@ -67,7 +67,9 @@ export default function About({ mode }) {
                         </h2>
                         <div id="collapseOne" className="accordion-collapse collapse show" data-bs-parent="#accordionExample">
                             <div className="accordion-body">
-                            A vibrant showcase of my creative journey, hidden in plain sight, waiting to be explored. <i>It's not just code; it's a treasure trove of art.</i>
+                            A vibrant showcase of my creative journey, hidden in plain sight, waiting to be explored. <i>It's not just code; it's a treasure trove of art.
+                            <a style={{textDecoration:'none'}} href="https://rahules24.github.io/sirenscripts/"> visit xd</a>
+                            </i>
                             </div>
                         </div>
                     </div>
