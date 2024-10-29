@@ -4,6 +4,8 @@ import About from './components/About';
 import Navbar from './components/Navbar';
 import TextForm from './components/TextForm';
 import Alert from './components/Alert';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 import {
   BrowserRouter as Router,
   Routes,
@@ -27,30 +29,22 @@ function App() {
       setMode('dark');
       document.body.style.backgroundColor = '#2b2f33';
       showAlert("Dark mode has been enabled", "warning")
-      // setInterval(() => {
-      //   document.title= "TextUtils Amazing"
-      // }, 220);
-      // setInterval(() => {
-      //   document.title= "Download Now"
-      // }, 300);
-      document.title= "TextUtils- Dark"
     }
     else{
       setMode('light');
       document.body.style.backgroundColor = 'white';
       showAlert("Light mode has been enabled", "success")
-      document.title= "TextUtils- Light"
     }
   }
   return (
     <Router>
-      <Navbar DD={123} title="TextUtils" about="About Us" mode={mode} toggleMode={toggleMode}/>
+      <Navbar mode={mode} toggleMode={toggleMode}/>
       <Alert alert={alert}/>
       <div className={`container my-3 text-${mode==='light'?'dark':'light'}`}>
         <Routes>
             <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter Text" mode={mode}/>}>
             </Route>
-            <Route exact path="/about" element={<About/>}>
+            <Route exact path="/about" element={<About mode={mode} />}>
             </Route>
         </Routes>
       </div>

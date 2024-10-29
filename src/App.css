@@ -1,38 +1,35 @@
-.App {
-  text-align: center;
+.accordion.light-mode {
+  --bs-accordion-active-bg: #fff;
+  --bs-accordion-btn-focus-box-shadow: #fff; ;
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23000000' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.accordion.dark-mode {
+  --bs-accordion-active-bg: #2b2f33;
+  --bs-accordion-btn-focus-box-shadow: #2b2f33; ;
+  --bs-accordion-btn-color: #ffffff;
+  --bs-accordion-active-color:#ffffff;
+  --bs-accordion-bg:: #2b2f33;
+  --bs-accordion-color:: #ffffff;
+  --bs-accordion-btn-active-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
+  --bs-accordion-btn-icon: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round'%3e%3cpath d='M2 5L8 11L14 5'/%3e%3c/svg%3e");
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+  height: 70px; 
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.nav-item {
+  margin: 0 10px; /* Space between items */
 }
-
-.App-link {
-  color: #61dafb;
+.nav-link {
+  line-height: 60px;
+  padding: 0 15px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.bg-color-light {
+  background-image: url('./images/nav2.png');
+}
+.bg-color-dark{
+  background-image: url('./images/nav.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
