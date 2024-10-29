@@ -23,7 +23,7 @@ export default function Navbar(props) {
             <li className="nav-item">
               <Link 
                 className={`nav-link ${location.pathname === "/rextutils" ? "active" : ""}`} 
-                to="/rextutils"
+                to="/"
                 style={{fontSize: '20px'}}
               >
                 RextUtils
@@ -32,7 +32,7 @@ export default function Navbar(props) {
             <li className="nav-item">
               <Link 
                 className={`nav-link ${location.pathname === "/rextutils/about" ? "active" : ""}`} 
-                to="/rextutils/about"
+                to="/about"
                 style={{fontSize: '18px'}}
               >
                 README.md

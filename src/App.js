@@ -42,9 +42,9 @@ function App() {
       <Alert alert={alert}/>
       <div className={`container my-3 text-${mode==='light'?'dark':'light'}`}>
         <Routes>
-            <Route exact path="/rextutils" element={<TextForm showAlert={showAlert} heading="Enter Text" mode={mode}/>}>
+            <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter Text" mode={mode}/>}>
             </Route>
-            <Route exact path="/rextutils/about" element={<About mode={mode} />}>
+            <Route exact path="/about" element={<About mode={mode} />}>
             </Route>
         </Routes>
       </div>
